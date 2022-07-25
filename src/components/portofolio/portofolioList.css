@@ -49,8 +49,8 @@
 
 @media screen and (max-width: 480px) {
   .PortofolioList {
-    width: 40%;
-    height: 20vh;
+    width: 80%;
+    height: 30vh;
     margin: 20px 10px;
   }
 }
