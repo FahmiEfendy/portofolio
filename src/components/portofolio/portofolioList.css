@@ -1,0 +1,55 @@
+.PortofolioList {
+  width: 40%;
+  height: 50vh;
+  margin: 20px 60px;
+  border: 2px solid rgb(243, 242, 242);
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.PortofolioList__Browser {
+  height: 30px;
+  background-color: rgb(243, 242, 242);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  z-index: 1;
+}
+
+.PortofolioList__Circle {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  margin: 3px;
+  border-radius: 50%;
+}
+
+.PortofolioList__Circle:nth-of-type(1) {
+  margin-left: 10px;
+  background-color: rgb(174, 9, 9);
+}
+
+.PortofolioList__Circle:nth-of-type(2) {
+  background-color: rgb(115, 115, 21);
+}
+.PortofolioList__Circle:nth-of-type(3) {
+  background-color: rgb(9, 117, 9);
+}
+
+.PortofolioList__Image {
+  width: 100%;
+  transition: all 15s ease;
+}
+
+/* if .PortofolioList hovered, .PortofolioList__Image will be effected */
+.PortofolioList:hover .PortofolioList__Image {
+  transform: translateY(-100%);
+}
+
+@media screen and (max-width: 480px) {
+  .PortofolioList {
+    width: 40%;
+    height: 20vh;
+  }
+}

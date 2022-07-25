@@ -1,0 +1,98 @@
+.Intro {
+  display: flex;
+  height: 100vh;
+}
+
+.Intro__Left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Intro__Left-Wrapper {
+  padding: 50px;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Intro__Opening {
+  font-size: 30px;
+  font: 300;
+}
+
+.Intro__Name {
+  font-size: 60px;
+}
+
+.Intro__Title {
+  height: 50px;
+  overflow: hidden;
+}
+
+.Intro__Title-Wrapper {
+  height: 100%;
+  animation: move 10s ease-in-out infinite alternate;
+}
+
+.Intro__Description {
+  width: 80%;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+@keyframes move {
+  25% {
+    transform: translateY(-50px);
+  }
+}
+
+.Intro__Title-Item {
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #134611;
+  display: flex;
+  align-items: center;
+}
+
+.Intro__Right {
+  flex: 1;
+  position: relative;
+}
+
+.Intro__Image-Background {
+  clip-path: inset(35% 2% 25% 0%);
+  background-color: #134611;
+  width: 100%;
+  height: 100%;
+}
+
+.Intro__Image {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  position: absolute;
+  top: 15%;
+  right: 20%;
+}
+
+@media screen and (max-width: 480px) {
+  .Intro {
+    flex-direction: column;
+  }
+
+  .Intro__Left-Wrapper {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+
+  .Intro__Description {
+    display: none;
+  }
+}
