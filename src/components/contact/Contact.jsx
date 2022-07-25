@@ -60,7 +60,7 @@ const Contact = () => {
               </a>
             </div>
             <div className="Contact__Info--Item">
-              <HomeLogo className="Contact__Icon" />
+              <HomeLogo className="Contact__Icon" id="Contact__Icon--Home" />
               Pademangan Raya 3 Street, Pademangan Timur, Jakarta Utara -
               Indonesia
             </div>

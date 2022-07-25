@@ -89,7 +89,7 @@ button {
 @media screen and (max-width: 480px) {
   .Contact__Wrapper {
     flex-direction: column;
-    padding: 30px 50px 0px 50px;
+    padding: 10px 50px 0px 50px;
   }
 
   .Contact__Title {
@@ -103,8 +103,12 @@ button {
   }
 
   .Contact__Icon {
-    width: 20px;
     height: 20px;
+    width: 20px;
+  }
+
+  #Contact__Icon--Home {
+    width: 35px;
   }
 
   .Contact__Description {
