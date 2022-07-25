@@ -37,7 +37,7 @@ const Contact = () => {
       <div className="Contact__Background"></div>
       <div className="Contact__Wrapper">
         <div className="Contact__Wrapper-Left">
-          <h1 className="Contact__Title">Let's Catch Up With Me!</h1>
+          <h1 className="Contact__Title">Catch Up With Me!</h1>
           <div className="Contact__Info">
             <div className="Contact__Info--Item">
               <PhoneLogo className="Contact__Icon" />

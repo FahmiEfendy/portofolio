@@ -1,8 +1,8 @@
 .PortofolioList {
   width: 40%;
-  height: 50vh;
-  margin: 20px 60px;
-  border: 2px solid rgb(243, 242, 242);
+  height: 40vh;
+  margin: 20px 70px;
+  border: 5px solid rgb(243, 242, 242);
   border-radius: 10px 10px 0px 0px;
   overflow: hidden;
   background-color: white;
@@ -51,5 +51,6 @@
   .PortofolioList {
     width: 40%;
     height: 20vh;
+    margin: 20px 10px;
   }
 }

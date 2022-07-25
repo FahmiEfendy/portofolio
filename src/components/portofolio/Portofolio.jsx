@@ -12,7 +12,7 @@ const Portofolio = () => {
         <div className="Portofolio__Text">
           <h1 className="Portofolio__Title">My Work</h1>
           <p className="Portofolio__Description">
-            Explain about general sentence about my work in this portofolio
+            This is example of my UI/UX Design and Web Developer work
           </p>
         </div>
         <div className="Portofolio__List">

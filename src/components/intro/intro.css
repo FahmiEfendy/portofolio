@@ -64,7 +64,7 @@
 }
 
 .Intro__Image-Background {
-  clip-path: inset(35% 2% 25% 0%);
+  clip-path: inset(35% 0% 25% 0%);
   background-color: #134611;
   width: 100%;
   height: 100%;
@@ -85,7 +85,7 @@
   }
 
   .Intro__Left-Wrapper {
-    padding: 10px;
+    padding: 0px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -93,6 +93,7 @@
   }
 
   .Intro__Description {
-    display: none;
+    margin-top: 20px;
+    font-size: 14px;
   }
 }
