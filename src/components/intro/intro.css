@@ -79,17 +79,26 @@
   right: 20%;
 }
 
+@media screen and (max-width: 1366px) {
+  .Intro__Left-Wrapper {
+    height: 50%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .Intro {
     flex-direction: column;
   }
 
   .Intro__Left-Wrapper {
-    padding: 0px;
     align-items: center;
     justify-content: center;
     text-align: center;
     height: 100%;
+  }
+
+  .Intro__Title-Item {
+    justify-content: center;
   }
 
   .Intro__Description {

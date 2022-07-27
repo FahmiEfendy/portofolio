@@ -47,10 +47,17 @@
   transform: translateY(-100%);
 }
 
+@media screen and (max-width: 1366px) {
+  .PortofolioList {
+    width: 35%;
+    height: 40vh;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .PortofolioList {
-    width: 80%;
-    height: 30vh;
+    width: 70%;
+    height: 20vh;
     margin: 20px 10px;
   }
 }

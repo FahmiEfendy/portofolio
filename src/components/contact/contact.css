@@ -86,6 +86,13 @@ button {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1366px) {
+  .Contact__Wrapper {
+    padding: 100px 50px 50px 100px;
+    display: flex;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .Contact__Wrapper {
     flex-direction: column;
@@ -94,6 +101,7 @@ button {
 
   .Contact__Title {
     font-size: 30px;
+    margin-top: 10%;
   }
 
   .Contact__Info--Item {
