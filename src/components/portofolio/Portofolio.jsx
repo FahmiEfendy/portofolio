@@ -10,9 +10,10 @@ const Portofolio = () => {
       <div className="Portofolio__Background"></div>
       <div className="Portofolio">
         <div className="Portofolio__Text">
-          <h1 className="Portofolio__Title">My Work</h1>
+          <h1 className="Portofolio__Title">My Project</h1>
           <p className="Portofolio__Description">
-            This is example of my UI/UX Design and Web Developer work
+            Below is a few example of my previous project in UI/UX Design and
+            Website Development.
           </p>
         </div>
         <div className="Portofolio__List">

@@ -68,8 +68,8 @@ const Contact = () => {
         </div>
         <div className="Contact__Wrapper-Right">
           <p className="Contact__Description">
-            <b>What's your story?</b> Get in touch. Always available for
-            freelancing if the right project comes along. me.
+            <b>Have any words in your mind?</b> Get in touch. Slide into form
+            below to share what's your thought about me.
           </p>
           <form ref={formRef} onSubmit={submitHandler}>
             <input type="text" name="user_name" placeholder="Name" />

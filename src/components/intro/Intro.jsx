@@ -15,9 +15,9 @@ const Intro = () => {
             </div>
           </div>
           <p className="Intro__Description">
-            I design and develop services for customers of all sizes,
-            specializing in credit stylish, modern websites, web services and
-            online stores.
+            Passionate about UI/UX design and website development, also enjoy
+            build website to simplify user intraction with website. Adaptable
+            and like to learn something new.
           </p>
         </div>
       </div>
