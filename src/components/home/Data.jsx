@@ -1,4 +1,5 @@
 import "./home.css";
+import CV from "../../assets/CV-Fahmi_Efendy.pdf";
 
 const Data = () => {
   return (
@@ -70,16 +71,20 @@ const Data = () => {
         an opportunity to contribute to the development of website applications.
       </p>
 
-      <a href="#contact" className="button button--flex">
-        Chat with Me
+      <a download="" href={CV} className="button button--flex">
+        Download CV
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 10 24"
           fill="#FFF"
           width="35"
           height="24"
+          id="file-alt"
         >
-          <path d="M20.56,3.34a1,1,0,0,0-1-.08l-17,8a1,1,0,0,0-.57.92,1,1,0,0,0,.6.9L8,15.45v6.72L13.84,18l4.76,2.08a.93.93,0,0,0,.4.09,1,1,0,0,0,.52-.15,1,1,0,0,0,.48-.79l1-15A1,1,0,0,0,20.56,3.34ZM18.1,17.68l-5.27-2.31L16,9.17,8.35,13.42,5.42,12.13,18.89,5.79Z"></path>
+          <path
+            fill="#FFF"
+            d="M9,10h1a1,1,0,0,0,0-2H9a1,1,0,0,0,0,2Zm0,2a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2ZM20,8.94a1.31,1.31,0,0,0-.06-.27l0-.09a1.07,1.07,0,0,0-.19-.28h0l-6-6h0a1.07,1.07,0,0,0-.28-.19.32.32,0,0,0-.09,0A.88.88,0,0,0,13.05,2H7A3,3,0,0,0,4,5V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V9S20,9,20,8.94ZM14,5.41,16.59,8H15a1,1,0,0,1-1-1ZM18,19a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V5A1,1,0,0,1,7,4h5V7a3,3,0,0,0,3,3h3Zm-3-3H9a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Z"
+          ></path>
         </svg>
       </a>
     </div>
