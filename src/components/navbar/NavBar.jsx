@@ -5,6 +5,17 @@ import NavItem from "./NavItem";
 
 const Header = () => {
   const [showNavbar, setShowNavbar] = useState(false);
+  const [activeNavbar, setActiveNavbar] = useState("#home");
+
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector(".header");
+
+    if (window.scrollY >= 80) {
+      header.classList.add("scroll-header");
+    } else {
+      header.classList.remove("scroll-header");
+    }
+  });
 
   return (
     <header className="header">
@@ -19,12 +30,30 @@ const Header = () => {
               href="#home"
               icon="estate"
               text="Home"
-              isLinkActive={true}
+              activeNavbar={activeNavbar}
+              setActiveNavbar={setActiveNavbar}
             />
-            <NavItem href="#about" icon="user" text="About" />
-            <NavItem href="#skills" icon="file-alt" text="Skills" />
-            <NavItem href="#portofolio" icon="scenery" text="Portofolio" />
-            <NavItem href="#contact" icon="message" text="Contact" />
+            <NavItem
+              href="#skills"
+              icon="file-alt"
+              text="Skills"
+              activeNavbar={activeNavbar}
+              setActiveNavbar={setActiveNavbar}
+            />
+            <NavItem
+              href="#qualification"
+              icon="scenery"
+              text="Qualification"
+              activeNavbar={activeNavbar}
+              setActiveNavbar={setActiveNavbar}
+            />
+            <NavItem
+              href="#contact"
+              icon="message"
+              text="Contact"
+              activeNavbar={activeNavbar}
+              setActiveNavbar={setActiveNavbar}
+            />
           </ul>
 
           <i
