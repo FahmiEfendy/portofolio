@@ -48,6 +48,13 @@ const Header = () => {
               setActiveNavbar={setActiveNavbar}
             />
             <NavItem
+              href="#portofolio"
+              icon="bag-alt"
+              text="Portofolio"
+              activeNavbar={activeNavbar}
+              setActiveNavbar={setActiveNavbar}
+            />
+            <NavItem
               href="#contact"
               icon="message"
               text="Contact"

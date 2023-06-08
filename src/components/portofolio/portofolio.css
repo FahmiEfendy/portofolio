@@ -1,0 +1,114 @@
+.portofolio__filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.75rem;
+  margin-bottom: var(--mb-2);
+}
+
+.portofolio__item {
+  cursor: pointer;
+  color: var(--title-color);
+  padding: 0.25rem 0.75rem;
+  font-size: var(--font-medium);
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+}
+
+.portofolio__item:hover {
+  background-color: var(--title-color);
+  color: var(--container-color);
+}
+
+.portofolio__container {
+  grid-template-columns: repeat(2, max-content);
+  gap: 3rem;
+  justify-content: center;
+}
+
+.portofolio__card {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  border-radius: 1rem;
+}
+
+.portofolio__img {
+  width: 295px;
+  border-radius: 1rem;
+  margin-bottom: var(--mb-1);
+}
+
+.portofolio__title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-0-5);
+}
+
+.portofolio__button {
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.portofolio__button-icon {
+  font-size: 1rem;
+  transition: 0.4s;
+}
+
+.portofolio__button:hover .portofolio__button-icon {
+  transform: rotateX(0.25rem);
+}
+
+/* Active Navbar */
+.active-portofolio {
+  background-color: var(--title-color);
+  color: var(--container-color);
+}
+
+/* Breakpoints */
+@media screen and (max-width: 992px) {
+  .portofolio__container {
+    gap: 1.25rem;
+  }
+
+  .portofolio__card {
+    padding: 1rem;
+  }
+
+  .portofolio__img {
+    margin-bottom: var(--mb-0-75);
+  }
+
+  .portofolio__title {
+    margin-bottom: var(--mb-0-25);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portofolio__container {
+    grid-template-columns: max-content;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .portofolio__container {
+    grid-template-columns: 1fr;
+  }
+
+  .portofolio__img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .portofolio__item {
+    font-size: var(--small-font-size);
+  }
+
+  .portofolio__filters {
+    column-gap: 0.25rem;
+  }
+}
