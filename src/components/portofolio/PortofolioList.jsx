@@ -5,15 +5,15 @@ import PortofolioItem from "./PortofolioItem";
 import { portofolioData, portofolioNav } from "../../data/data";
 
 const PortofolioList = () => {
-  const [activePortoNav, setActivePortoNav] = useState("all");
   const [activePortoData, setActivePortoData] = useState([]);
+  const [activePortoNav, setActivePortoNav] = useState("All");
 
   useEffect(() => {
-    if (activePortoNav === "all") {
+    if (activePortoNav === "All") {
       setActivePortoData(portofolioData);
     } else {
       const filteredPortoData = portofolioData.filter(
-        (data) => data.category.toLowerCase() === activePortoNav
+        (data) => data.category === activePortoNav
       );
       setActivePortoData(filteredPortoData);
     }
