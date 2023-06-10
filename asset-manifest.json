@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/portofolio/static/css/main.a4bf0233.css",
+    "main.js": "/portofolio/static/js/main.e18f609a.js",
+    "static/media/SiNgebut.png": "/portofolio/static/media/SiNgebut.06164a8dc6c88d510f76.png",
+    "static/media/GreenLaundry.png": "/portofolio/static/media/GreenLaundry.4d36309e944b8c98afa2.png",
+    "static/media/MrSpeedy.png": "/portofolio/static/media/MrSpeedy.a67f7d94afaa91bc50ab.png",
+    "static/media/profile.webp": "/portofolio/static/media/profile.0e6ec33711c3632ff27b.webp",
+    "static/media/thewinecorner.png": "/portofolio/static/media/thewinecorner.c56e6b8379860ebd0ed6.png",
+    "static/media/CV-Fahmi_Efendy.pdf": "/portofolio/static/media/CV-Fahmi_Efendy.6173e3065ff6f864c5a1.pdf",
+    "index.html": "/portofolio/index.html",
+    "main.a4bf0233.css.map": "/portofolio/static/css/main.a4bf0233.css.map",
+    "main.e18f609a.js.map": "/portofolio/static/js/main.e18f609a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4bf0233.css",
+    "static/js/main.e18f609a.js"
+  ]
+}
