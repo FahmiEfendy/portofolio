@@ -70,7 +70,7 @@ const Qualification = () => {
               date="Jan 2018 - Mar 2018"
             />
             <QualificationList
-              title="Systeric - Software Development Agency - Jakarta, Indonesia"
+              title="Systeric - Software Development Agency - Bali, Indonesia"
               subtitle="Front End Developer"
               date="May 2022 - Feb 2023"
               right
