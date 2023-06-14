@@ -67,12 +67,12 @@ const Qualification = () => {
             <QualificationList
               title="Department of Communications and Informatics - Pangkal Pinang, Indonesia"
               subtitle="Computer and Network Engineer"
-              date="January 2018 - March 2018"
+              date="Jan 2018 - Mar 2018"
             />
             <QualificationList
               title="Systeric - Software Development Agency - Jakarta, Indonesia"
               subtitle="Front End Developer"
-              date="May 2022 - February 2023"
+              date="May 2022 - Feb 2023"
               right
             />
           </div>
