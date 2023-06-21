@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portofolio/static/css/main.f8247715.css",
-    "main.js": "/portofolio/static/js/main.3041e0c6.js",
+    "main.css": "/portofolio/static/css/main.bbd546fc.css",
+    "main.js": "/portofolio/static/js/main.fc4503c0.js",
     "static/media/yourplaces.png": "/portofolio/static/media/yourplaces.a0b67fa5ae3b4bdc28c1.png",
     "static/media/profile.png": "/portofolio/static/media/profile.8552d3c04373c98542f5.png",
     "static/media/SiNgebut.png": "/portofolio/static/media/SiNgebut.2025487350940bc18213.png",
@@ -9,12 +9,13 @@
     "static/media/MrSpeedy.png": "/portofolio/static/media/MrSpeedy.1eff136b9b7c728cf6eb.png",
     "static/media/thewinecorner.png": "/portofolio/static/media/thewinecorner.c56e6b8379860ebd0ed6.png",
     "static/media/CV-Fahmi_Efendy.pdf": "/portofolio/static/media/CV-Fahmi_Efendy.1112fdb3b2c57b71b72e.pdf",
+    "static/media/expensetracker.png": "/portofolio/static/media/expensetracker.dc4f3781a1492372df10.png",
     "index.html": "/portofolio/index.html",
-    "main.f8247715.css.map": "/portofolio/static/css/main.f8247715.css.map",
-    "main.3041e0c6.js.map": "/portofolio/static/js/main.3041e0c6.js.map"
+    "main.bbd546fc.css.map": "/portofolio/static/css/main.bbd546fc.css.map",
+    "main.fc4503c0.js.map": "/portofolio/static/js/main.fc4503c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8247715.css",
-    "static/js/main.3041e0c6.js"
+    "static/css/main.bbd546fc.css",
+    "static/js/main.fc4503c0.js"
   ]
 }
