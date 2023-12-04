@@ -18,7 +18,7 @@ export const portofolioData = [
     id: 2,
     image: yourplaces,
     title: "YourPlaces",
-    href: "https://mern-yourplaces-982fa.web.app",
+    href: "https://yourplaces-front.vercel.app/",
     category: "Website",
   },
   {
