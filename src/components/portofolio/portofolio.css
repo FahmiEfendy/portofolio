@@ -39,9 +39,20 @@
 }
 
 .portofolio__title {
-  font-size: var(--normal-font-size);
+  font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-5);
+}
+
+
+.portofolio__tag {
+  cursor: pointer;
+  color: var(--container-color);
+  padding: 0.25rem 0.75rem;
+  margin-right: 0.4rem;
+  font-size: var(--smaller-font-size);
+  border-radius: 0.5rem;
+  background-color: var(--title-color);
 }
 
 .portofolio__button {
@@ -50,6 +61,7 @@
   display: flex;
   align-items: center;
   column-gap: 0.25rem;
+  margin-top: 1rem;
 }
 
 .portofolio__button-icon {
