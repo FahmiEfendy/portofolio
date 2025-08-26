@@ -10,7 +10,12 @@ const Home = () => {
         <div className="home__content grid">
           <Social />
 
-          <div className="home__img"></div>
+          <div
+            className="home__img"
+            style={{
+              backgroundImage: `url(${process.env.PUBLIC_URL}/image/profile.png)`,
+            }}
+          ></div>
 
           <Data />
         </div>
