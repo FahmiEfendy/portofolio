@@ -6,7 +6,7 @@ const Footer = () => {
   const [socialList, setSocialList] = useState([]);
 
   useEffect(() => {
-    fetch("/json/socials.json")
+    fetch(process.env.PUBLIC_URL + "/json/socials.json")
       .then((res) => res.json())
       .then((data) => setSocialList(data))
       .catch((err) => console.error(err, "<<< ERROR FETCH SOCIAL LIST"));

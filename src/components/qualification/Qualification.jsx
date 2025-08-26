@@ -9,14 +9,14 @@ const Qualification = () => {
   const [experienceList, setExperienceList] = useState([]);
 
   useEffect(() => {
-    fetch("/json/educations.json")
+    fetch(process.env.PUBLIC_URL + "/json/educations.json")
       .then((res) => res.json())
       .then((data) => setEducationList(data))
       .catch((err) => console.error(err, "<<< ERROR FETCH EDUCATION LIST"));
   }, []);
 
   useEffect(() => {
-    fetch("/json/experiences.json")
+    fetch(process.env.PUBLIC_URL + "/json/experiences.json")
       .then((res) => res.json())
       .then((data) => setExperienceList(data))
       .catch((err) => console.error(err, "<<< ERROR FETCH EXPERIENCE LIST"));

@@ -10,7 +10,7 @@ const PortofolioList = () => {
   const [activePortoNav, setActivePortoNav] = useState("All");
 
   useEffect(() => {
-    fetch("/json/portofolios.json")
+    fetch(process.env.PUBLIC_URL + "/json/portofolios.json")
       .then((res) => res.json())
       .then((data) => setPortofolioList(data.filter((data) => data.isActive)))
       .catch((err) => console.error(err, "<<< ERROR FETCH CONTACT LIST"));

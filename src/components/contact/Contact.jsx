@@ -73,7 +73,7 @@ const Contact = () => {
   };
 
   useEffect(() => {
-    fetch("/json/contacts.json")
+    fetch(process.env.PUBLIC_URL + "/json/contacts.json")
       .then((res) => res.json())
       .then((data) => setContactList(data))
       .catch((err) => console.error(err, "<<< ERROR FETCH CONTACT LIST"));
