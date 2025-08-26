@@ -6,7 +6,7 @@ const Footer = () => {
   const [socialList, setSocialList] = useState([]);
 
   useEffect(() => {
-    fetch("/socials.json")
+    fetch("/json/socials.json")
       .then((res) => res.json())
       .then((data) => setSocialList(data))
       .catch((err) => console.error(err, "<<< ERROR FETCH SOCIAL LIST"));

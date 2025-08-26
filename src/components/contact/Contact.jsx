@@ -73,7 +73,7 @@ const Contact = () => {
   };
 
   useEffect(() => {
-    fetch("/contacts.json")
+    fetch("/json/contacts.json")
       .then((res) => res.json())
       .then((data) => setContactList(data))
       .catch((err) => console.error(err, "<<< ERROR FETCH CONTACT LIST"));

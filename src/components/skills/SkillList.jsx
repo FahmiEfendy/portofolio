@@ -8,14 +8,14 @@ const SkillList = () => {
   const [frontendSkills, setFrontendSkills] = useState([]);
 
   useEffect(() => {
-    fetch("/backend_skills.json")
+    fetch("/json/backend_skills.json")
       .then((res) => res.json())
       .then((data) => setBackendSkills(data))
       .catch((err) => console.error(err, "<<< ERROR FETCH BACKEND SKILL"));
   }, []);
 
   useEffect(() => {
-    fetch("/frontend_skills.json")
+    fetch("/json/frontend_skills.json")
       .then((res) => res.json())
       .then((data) => setFrontendSkills(data))
       .catch((err) => console.error(err, "<<< ERROR FETCH FRONTEND SKILL"));
