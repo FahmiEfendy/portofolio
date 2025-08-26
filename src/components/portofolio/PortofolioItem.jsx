@@ -5,7 +5,11 @@ const Item = (props) => {
 
   return (
     <div key={id} className="portofolio__card">
-      <img src={`../../${image}`} alt={title} className="portofolio__img" />
+      <img
+        src={process.env.PUBLIC_URL + "/" + image}
+        alt={title}
+        className="portofolio__img"
+      />
       <h3 className="portofolio__title">{title}</h3>
       <div>
         {tags.map((tag, index) => (
