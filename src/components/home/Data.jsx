@@ -1,7 +1,8 @@
 import "./home.css";
-import CV from "../../assets/CV-Fahmi_Efendy.pdf";
 
 const Data = () => {
+  const CV = process.env.REACT_APP_CV_URL;
+
   return (
     <div className="home__data">
       <h1 className="home__title">
@@ -71,7 +72,12 @@ const Data = () => {
         an opportunity to contribute to the development of website applications.
       </p>
 
-      <a download="" href={CV} className="button button--flex">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href={CV}
+        className="button button--flex"
+      >
         Download CV
         <svg
           xmlns="http://www.w3.org/2000/svg"

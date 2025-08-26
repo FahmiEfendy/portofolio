@@ -1,10 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./qualification.css";
 import QualificationList from "./QualificationList";
 
 const Qualification = () => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(1);
+  const [educationList, setEducationList] = useState([]);
+  const [experienceList, setExperienceList] = useState([]);
+
+  useEffect(() => {
+    fetch("/educations.json")
+      .then((res) => res.json())
+      .then((data) => setEducationList(data))
+      .catch((err) => console.error(err, "<<< ERROR FETCH EDUCATION LIST"));
+  }, []);
+
+  useEffect(() => {
+    fetch("/experiences.json")
+      .then((res) => res.json())
+      .then((data) => setExperienceList(data))
+      .catch((err) => console.error(err, "<<< ERROR FETCH EXPERIENCE LIST"));
+  }, []);
 
   return (
     <section className="qualification section" id="qualification">
@@ -43,17 +59,15 @@ const Qualification = () => {
               activeTab === 0 && "qualification__content-active"
             }`}
           >
-            <QualificationList
-              title="Bina Nusantara Bandung University"
-              subtitle="Bachelor of Computer Science - GPA 3.56"
-              date="2019 - 2023"
-            />
-            <QualificationList
-              title="2nd Vocational High School of Pangkal Pinang"
-              subtitle="Computer and Network Engineering"
-              date="2016 - 2019"
-              right
-            />
+            {educationList.map((list, index) => (
+              <QualificationList
+                key={index}
+                title={list.title}
+                subtitle={list.subtitle}
+                date={list.date}
+                right={index % 2 === 1}
+              />
+            ))}
           </div>
         </div>
 
@@ -64,17 +78,15 @@ const Qualification = () => {
               activeTab === 1 && "qualification__content-active"
             }`}
           >
-            <QualificationList
-              title="Department of Communications and Informatics - Pangkal Pinang, Indonesia"
-              subtitle="Computer and Network Engineer"
-              date="Jan 2018 - Mar 2018"
-              right
-            />
-            <QualificationList
-              title="Systeric - Software Development Agency - Bali, Indonesia"
-              subtitle="Front End Developer"
-              date="May 2022 - Feb 2023"
-            />
+            {experienceList.map((list, index) => (
+              <QualificationList
+                key={index}
+                title={list.title}
+                subtitle={list.subtitle}
+                date={list.date}
+                right={index % 2 === 1}
+              />
+            ))}
           </div>
         </div>
       </div>

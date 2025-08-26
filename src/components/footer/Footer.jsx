@@ -1,41 +1,34 @@
+import { useEffect, useState } from "react";
+
 import "./footer.css";
 
 const Footer = () => {
+  const [socialList, setSocialList] = useState([]);
+
+  useEffect(() => {
+    fetch("/socials.json")
+      .then((res) => res.json())
+      .then((data) => setSocialList(data))
+      .catch((err) => console.error(err, "<<< ERROR FETCH SOCIAL LIST"));
+  }, []);
+
   return (
     <footer className="footer">
       <div className="footer__container container">
         <h1 className="footer__title">Fahmi</h1>
 
         <div className="footer__social">
-          {/* Linkedin */}
-          <a
-            href="https://www.linkedin.com/in/fahmi-efendy/"
-            className="footer__social-link"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <i className="bx bxl-linkedin-square"></i>
-          </a>
-
-          {/* Github */}
-          <a
-            href="https://github.com/fahmiefendy"
-            className="footer__social-link"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <i className="bx bxl-github"></i>
-          </a>
-
-          {/* Instagram */}
-          <a
-            href="https://www.instagram.com/fahmiefendy_/"
-            className="footer__social-link"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <i className="bx bxl-instagram-alt"></i>
-          </a>
+          {socialList.map((list, index) => (
+            <a
+              key={index}
+              href={list.href}
+              className="footer__social-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className={list.iconFooter}></i>
+            </a>
+          ))}
         </div>
 
         <span className="footer__copy">

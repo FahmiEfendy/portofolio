@@ -1,44 +1,39 @@
+import { useEffect, useState } from "react";
+
 import "./skills.css";
-import SkillItem from "./SkillItem";
+import SkillSection from "./SkillSection";
 
 const SkillList = () => {
+  const [backendSkills, setBackendSkills] = useState([]);
+  const [frontendSkills, setFrontendSkills] = useState([]);
+
+  useEffect(() => {
+    fetch("/backend_skills.json")
+      .then((res) => res.json())
+      .then((data) => setBackendSkills(data))
+      .catch((err) => console.error(err, "<<< ERROR FETCH BACKEND SKILL"));
+  }, []);
+
+  useEffect(() => {
+    fetch("/frontend_skills.json")
+      .then((res) => res.json())
+      .then((data) => setFrontendSkills(data))
+      .catch((err) => console.error(err, "<<< ERROR FETCH FRONTEND SKILL"));
+  }, []);
+
   return (
     <>
       {/* Frontend */}
-      <div className="skills__content">
-        <h3 className="skills__title">Frontend Developer</h3>
-
-        <div className="skills__box">
-          <div className="skills__group">
-            <SkillItem name="HTML" level="Intermediate" />
-            <SkillItem name="CSS" level="Basic" />
-            <SkillItem name="JavaScript" level="Intermediate" />
-          </div>
-          <div className="skills__group">
-            <SkillItem name="Git" level="Basic" />
-            <SkillItem name="React" level="Intermediate" />
-            <SkillItem name="Material UI" level="Intermediate" />
-          </div>
-        </div>
-      </div>
+      <SkillSection
+        skillType={frontendSkills}
+        skillTitle={"Frontend Developer"}
+      />
 
       {/* Backend */}
-      <div className="skills__content">
-        <h3 className="skills__title">Backend Developer</h3>
-
-        <div className="skills__box">
-          <div className="skills__group">
-            <SkillItem name="Node.js" level="Basic" />
-            <SkillItem name="Express.js" level="Basic" />
-            <SkillItem name="MongoDB" level="Basic" />
-          </div>
-          <div className="skills__group">
-            <SkillItem name="MySQL" level="Basic" />
-            <SkillItem name="cPanel" level="Basic" />
-            <SkillItem name="Firebase" level="Basic" />
-          </div>
-        </div>
-      </div>
+      <SkillSection
+        skillType={backendSkills}
+        skillTitle={"Backend Developer"}
+      />
     </>
   );
 };

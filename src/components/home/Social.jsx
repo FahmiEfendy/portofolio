@@ -1,34 +1,31 @@
+import { Fragment, useEffect, useState } from "react";
+
 import "./home.css";
 
 const Social = () => {
+  const [socialList, setSocialList] = useState([]);
+
+  useEffect(() => {
+    fetch("/socials.json")
+      .then((res) => res.json())
+      .then((data) => setSocialList(data))
+      .catch((err) => console.error(err, "<<< ERROR FETCH SOCIAL LIST"));
+  }, []);
+
   return (
     <div className="home__social">
-      <a
-        href="https://www.linkedin.com/in/fahmi-efendy/"
-        className="home__social-icon"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <i className="uil uil-linkedin"></i>
-      </a>
-
-      <a
-        href="https://github.com/fahmiefendy"
-        className="home__social-icon"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <i className="uil uil-github-alt"></i>
-      </a>
-
-      <a
-        href="https://www.instagram.com/fahmiefendy_/"
-        className="home__social-icon"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <i className="uil uil-instagram"></i>
-      </a>
+      {socialList.map((list, index) => (
+        <Fragment key={index}>
+          <a
+            href={list.href}
+            className="home__social-icon"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className={list.icon}></i>
+          </a>
+        </Fragment>
+      ))}
     </div>
   );
 };
