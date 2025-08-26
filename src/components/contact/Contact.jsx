@@ -1,22 +1,106 @@
-import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useEffect, useRef, useState } from "react";
 
 import "./contact.css";
+import ContactItem from "./ContactItem";
 
 const Contact = () => {
   const form = useRef();
 
+  const [contactList, setContactList] = useState([]);
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [error, setError] = useState({
+    errorName: "",
+    errorEmail: "",
+    errorMessage: "",
+  });
+
   const sendEmailHandler = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      "service_hfgylib",
-      "template_sxo5jk8",
-      form.current,
-      "QpoviVkRezdZv3L9t"
-    );
+    if (!input.name) {
+      setError((prevState) => ({
+        ...prevState,
+        errorName: "Please enter your name.",
+      }));
+    }
+
+    if (!input.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.email)) {
+      setError((prevState) => ({
+        ...prevState,
+        errorEmail: "Please enter a valid email address.",
+      }));
+    }
+
+    if (!input.message) {
+      setError((prevState) => ({
+        ...prevState,
+        errorMessage: "Please enter a message.",
+      }));
+    }
+
+    if (
+      !input.name ||
+      !input.email ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.email) ||
+      !input.message
+    ) {
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        "service_hfgylib",
+        "template_sxo5jk8",
+        form.current,
+        "QpoviVkRezdZv3L9t"
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          e.target.reset();
+        },
+        (error) => {
+          console.error(error.text, "<<< ERROR SEND MESSAGE");
+          alert("Oops, something went wrong. Please try again.");
+        }
+      );
     e.target.reset();
   };
+
+  useEffect(() => {
+    fetch("/contacts.json")
+      .then((res) => res.json())
+      .then((data) => setContactList(data))
+      .catch((err) => console.error(err, "<<< ERROR FETCH CONTACT LIST"));
+  }, []);
+
+  useEffect(() => {
+    if (error.errorName !== "" && input.name !== "") {
+      setError((prevState) => ({ ...prevState, errorName: "" }));
+    }
+    if (
+      error.errorEmail !== "" &&
+      input.email !== "" &&
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.email)
+    ) {
+      setError((prevState) => ({ ...prevState, errorEmail: "" }));
+    }
+    if (error.errorMessage !== "" && input.message !== "") {
+      setError((prevState) => ({ ...prevState, errorMessage: "" }));
+    }
+  }, [
+    error.errorEmail,
+    error.errorMessage,
+    error.errorName,
+    input.email,
+    input.message,
+    input.name,
+  ]);
 
   return (
     <section className="contact section" id="contact">
@@ -28,57 +112,16 @@ const Contact = () => {
           <h3 className="contact__title">Talk to me</h3>
 
           <div className="contact__info">
+            {contactList.map((list, index) => (
+              <ContactItem
+                key={index}
+                icon={list.icon}
+                title={list.title}
+                detail={list.detail}
+                href={list.href}
+              />
+            ))}
             {/* Email */}
-            <div className="contact__card">
-              <div className="bx bx-mail-send contact__card-icon"></div>
-
-              <h3 className="contact__card-title ">Email</h3>
-              <span className="contact__card-data">
-                itsfahmiefendy@gmail.com
-              </span>
-
-              <a
-                href="mailto:itsfahmiefendy@gmail.com"
-                className="contact__button"
-              >
-                Contact me{" "}
-                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-              </a>
-            </div>
-
-            {/* WhatsApp */}
-            <div className="contact__card">
-              <div className="bx bxl-whatsapp contact__card-icon"></div>
-
-              <h3 className="contact__card-title ">WhatsApp</h3>
-              <span className="contact__card-data">+62851 5533 6938</span>
-
-              <a
-                href="https://wa.me/+6285155336938"
-                target="_blank"
-                rel="noreferrer"
-                className="contact__button"
-              >
-                Contact me{" "}
-                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-              </a>
-            </div>
-
-            {/* Line */}
-            <div className="contact__card">
-              <div className="uil uil-line contact__card-icon"></div>
-
-              <h3 className="contact__card-title ">Line</h3>
-              <span className="contact__card-data">fahmie-</span>
-
-              <a
-                href="http://line.me/ti/p/~fahmie-"
-                className="contact__button"
-              >
-                Contact me{" "}
-                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-              </a>
-            </div>
           </div>
         </div>
 
@@ -99,8 +142,15 @@ const Contact = () => {
                 name="name"
                 className="contact__form-input"
                 placeholder="Input your name..."
+                onChange={(e) =>
+                  setInput((prevState) => ({
+                    ...prevState,
+                    name: e.target.value,
+                  }))
+                }
               />
             </div>
+            <label className={"contact__form-error"}>{error.errorName}</label>
 
             <div className="contact__form-div">
               <label htmlFor="email" className="contact__form-tag">
@@ -111,8 +161,15 @@ const Contact = () => {
                 name="email"
                 className="contact__form-input"
                 placeholder="Input your email..."
+                onChange={(e) =>
+                  setInput((prevState) => ({
+                    ...prevState,
+                    email: e.target.value,
+                  }))
+                }
               />
             </div>
+            <label className={"contact__form-error"}>{error.errorEmail}</label>
 
             <div className="contact__form-div contact__form-area">
               <label htmlFor="message" className="contact__form-tag">
@@ -124,8 +181,15 @@ const Contact = () => {
                 rows="10"
                 className="contact__form-input"
                 placeholder="Write me a message..."
+                onChange={(e) =>
+                  setInput((prevState) => ({
+                    ...prevState,
+                    message: e.target.value,
+                  }))
+                }
               ></textarea>
             </div>
+            <p className={"contact__form-error"}>{error.errorMessage}</p>
 
             <button className="button button--flex">
               Send Message

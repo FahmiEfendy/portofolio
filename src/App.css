@@ -14,6 +14,14 @@
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #fff;
 
+  /* Error colors */
+  --error-hue: 0;
+  --error-sat: 84%;
+  --error-light: 50%;
+
+  --error-color: hsl(var(--error-hue), var(--error-sat), var(--error-light));
+  --error-color-light: hsl(var(--error-hue), var(--error-sat), 90%);
+
   /* Font Family*/
   --body-font: "Poppins", sans-serif;
 
@@ -125,7 +133,7 @@ img {
 .section__subtitle {
   display: block;
   font-size: var(--small-font-size);
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .section__title,

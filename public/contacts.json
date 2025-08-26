@@ -1,0 +1,20 @@
+[
+  {
+    "icon": "bx bx-mail-send contact__card-icon",
+    "title": "Email",
+    "detail": "itsfahmiefendy@gmail.com",
+    "href": "mailto:itsfahmiefendy@gmail.com"
+  },
+  {
+    "icon": "bx bxl-whatsapp contact__card-icon",
+    "title": "WhatsApp",
+    "detail": "+62852 1114 7339",
+    "href": "https://wa.me/+6285211147339"
+  },
+  {
+    "icon": "bx bxl-linkedin contact__card-icon",
+    "title": "LinkedIn",
+    "detail": "Fahmi Efendy",
+    "href": "https://www.linkedin.com/in/fahmi-efendy"
+  }
+]
