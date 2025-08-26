@@ -1,0 +1,17 @@
+[
+  {
+    "href": "https://www.linkedin.com/in/fahmi-efendy/",
+    "icon": "uil uil-linkedin",
+    "iconFooter": "bx bxl-linkedin"
+  },
+  {
+    "href": "https://github.com/fahmiefendy",
+    "icon": "uil uil-github-alt",
+    "iconFooter": "bx bxl-github"
+  },
+  {
+    "href": "https://www.instagram.com/fahmiefendy_/",
+    "icon": "uil uil-instagram",
+    "iconFooter": "bx bxl-instagram"
+  }
+]

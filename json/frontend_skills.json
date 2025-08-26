@@ -1,0 +1,8 @@
+[
+  { "name": "React.js", "level": "Intermediate" },
+  { "name": "TypeScript", "level": "Intermediate" },
+  { "name": "Next.js", "level": "Intermediate" },
+  { "name": "Material UI", "level": "Intermediate" },
+  { "name": "Redux", "level": "Beginner" },
+  { "name": "SCSS", "level": "Beginner" }
+]
