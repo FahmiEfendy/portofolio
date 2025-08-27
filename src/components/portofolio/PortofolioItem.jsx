@@ -1,7 +1,15 @@
 import "./portofolio.css";
 
 const Item = (props) => {
-  const { id, image, title, href = "", tags } = props.data;
+  const {
+    id,
+    image,
+    title,
+    href = "",
+    tags,
+    category,
+    externalLinks,
+  } = props.data;
 
   return (
     <div key={id} className="portofolio__card">
@@ -24,9 +32,21 @@ const Item = (props) => {
         rel="noreferrer"
         className="portofolio__button"
       >
-        View More{" "}
+        {`View ${category === "Website" ? "Website" : "Design"} `}
         <i className="bx bx-right-arrow-alt portofolio__button-icon"></i>
       </a>
+      <div>
+        {externalLinks?.map((link, index) => (
+          <span
+            key={index}
+            className="portofolio__links"
+            onClick={() => window.open(link.href, "_blank")}
+            style={{ cursor: "pointer" }}
+          >
+            {link.title}
+          </span>
+        ))}
+      </div>
     </div>
   );
 };

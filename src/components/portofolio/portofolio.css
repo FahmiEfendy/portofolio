@@ -20,7 +20,8 @@
 }
 
 .portofolio__container {
-  grid-template-columns: repeat(2, max-content);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
   gap: 3rem;
   justify-content: center;
 }
@@ -33,7 +34,8 @@
 }
 
 .portofolio__img {
-  width: 295px;
+  width: 100%;
+  height: 20rem;
   border-radius: 1rem;
   margin-bottom: var(--mb-1);
 }
@@ -43,7 +45,6 @@
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-5);
 }
-
 
 .portofolio__tag {
   cursor: pointer;
@@ -62,6 +63,7 @@
   align-items: center;
   column-gap: 0.25rem;
   margin-top: 1rem;
+  margin-bottom: 0.1rem;
 }
 
 .portofolio__button-icon {
@@ -71,6 +73,16 @@
 
 .portofolio__button:hover .portofolio__button-icon {
   transform: rotateX(0.25rem);
+}
+
+.portofolio__links {
+  cursor: pointer;
+  color: var(--container-color);
+  padding: 0.25rem 0.65rem;
+  margin-right: 0.3rem;
+  font-size: var(--tiny-font-size);
+  border-radius: 0.35rem;
+  background-color: var(--title-color);
 }
 
 /* Active Navbar */

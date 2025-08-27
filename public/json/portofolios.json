@@ -1,12 +1,40 @@
 [
   {
+    "id": 6,
+    "image": "image/MyTelkomselWeb.png",
+    "title": "MyTelkomsel Web",
+    "href": "https://my.telkomsel.com/",
+    "category": "Website",
+    "tags": ["React.js", "React Redux", "Express.js", "AWS"],
+    "isActive": true
+  },
+  {
+    "id": 7,
+    "image": "image/IAmCasting.png",
+    "title": "IAm Casting",
+    "href": "https://https://iamcasting.asia/",
+    "category": "Website",
+    "tags": ["Next.js", "TypeScript", "Redux", "Material UI"],
+    "isActive": true
+  },
+  {
     "id": 1,
     "image": "image/thewinecorner.png",
     "title": "The Wine Corner",
     "href": "https://thewinecorner.web.id",
     "category": "Website",
     "tags": ["React.js", "Express.js", "Node.js", "MySQL"],
-    "isActive": true
+    "isActive": true,
+    "externalLinks": [
+      {
+        "title": "Frontend Repo",
+        "href": "https://github.com/FahmiEfendy/the-wine-corner--front"
+      },
+      {
+        "title": "Backend Repo",
+        "href": "https://github.com/FahmiEfendy/the-wine-corner--back"
+      }
+    ]
   },
   {
     "id": 2,
@@ -15,7 +43,17 @@
     "href": "https://yourplaces-front.vercel.app/",
     "category": "Website",
     "tags": ["React.js", "Express.js", "Node.js", "MongoDB"],
-    "isActive": true
+    "isActive": true,
+    "externalLinks": [
+      {
+        "title": "Frontend Repo",
+        "href": "https://github.com/FahmiEfendy/yourplaces--front"
+      },
+      {
+        "title": "Backend Repo",
+        "href": "https://github.com/FahmiEfendy/yourplaces--back"
+      }
+    ]
   },
   {
     "id": 3,
@@ -43,14 +81,5 @@
     "category": "UI/UX",
     "tags": ["Figma"],
     "isActive": false
-  },
-  {
-    "id": 6,
-    "image": "image/MyTelkomselWeb.png",
-    "title": "MyTelkomsel Web",
-    "href": "https://my.telkomsel.com/",
-    "category": "Website",
-    "tags": ["React.js", "React Redux", "Express.js", "AWS"],
-    "isActive": true
   }
 ]
